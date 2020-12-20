@@ -32,7 +32,7 @@ impl Spiral {
         (usize::from(self.current / self.cols), usize::from(self.current % self.cols))
     }
 
-    pub fn get_next(&mut self) -> (usize, usize) {
+    fn get_next(&mut self) -> (usize, usize) {
         match self.direction {
             Direction::R => {
                 let o = self.cols- 1 - *self.offset.entry(Direction::U).or_insert(0);
