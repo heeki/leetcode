@@ -3,8 +3,9 @@ pub struct ListNode {
     pub val: i32,
     pub next: Option<Box<ListNode>>
 }
+#[allow(dead_code)]
 impl ListNode {
-    #[allow(dead_code)]
+    #[inline]
     fn new(val: i32) -> Self {
         ListNode {
             next: None,
@@ -21,6 +22,7 @@ use std::cmp;
 pub struct List {
     pub head: Option<Box<ListNode>>
 }
+#[allow(dead_code)]
 impl List {
     fn new(node: Option<Box<ListNode>>) -> Self {
         List { head: node }
@@ -45,17 +47,17 @@ impl List {
 pub struct Solution {}
 impl Solution {
     pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let list1 = Solution::create_list_from_node(l1);
-        let list2 = Solution::create_list_from_node(l2);
-        let vec1 = Solution::convert_to_vec(list1);
-        let vec2 = Solution::convert_to_vec(list2);
-        println!("vec1={:?}", vec1);
-        println!("vec2={:?}", vec2);
+        let vec1 = Solution::create_vec_from_node(l1);
+        let vec2 = Solution::create_vec_from_node(l2);
+        // println!("vec1={:?}", vec1);
+        // println!("vec2={:?}", vec2);
+
         let mut result = vec![];
         let mut carry = 0;
         let ops1 = cmp::min(vec1.len(), vec2.len());
         let ops2 = cmp::max(vec1.len(), vec2.len());
-        println!("ops1={} ops2={}", ops1, ops2);
+        // println!("ops1={} ops2={}", ops1, ops2);
+
         for i in 0..ops1 {
             let mut sum = vec1[i] + vec2[i] + carry;
             carry = 0;
@@ -63,9 +65,10 @@ impl Solution {
                 sum -= 10;
                 carry += 1;
             }
-            println!("ops1: result={} vec1={} vec2={} carry={}", sum, vec1[i], vec2[i], carry);
+            // println!("ops1: result={} vec1={} vec2={} carry={}", sum, vec1[i], vec2[i], carry);
             result.push(sum);
         }
+
         for j in ops1..ops2 {
             let mut sum = 0;
             if vec1.len() == ops2 {
@@ -78,42 +81,31 @@ impl Solution {
                 sum -= 10;
                 carry += 1;
             }
-            println!("ops2: result={}", sum);
+            // println!("ops2: result={}", sum);
             result.push(sum);
         }
+
         if carry > 0 {
-            println!("ops3: result={}", carry);
+            // println!("ops3: result={}", carry);
             result.push(carry);
         }
-        println!("result={:?}", result);
-        let head = Solution::create_list_from_vec(result).head;
-        println!("head.val={:?}", head);
-        head
+
+        // println!("result={:?}", result);
+        let list = Solution::create_list_from_vec(result);
+        list.head
     }
 
     // helper functions for computation
-    pub fn create_list_from_node(mut input: Option<Box<ListNode>>) -> List {
-        let mut list: List = List::new(None);
-        let mut current = input.take();
+    pub fn create_vec_from_node(input: Option<Box<ListNode>>) -> Vec<i32> {
+        let mut vec = vec![];
+        let mut current = input;
         while let Some(node) = current {
-            list.push(node.val);
+            vec.push(node.val);
             current = node.next;
         }
-        list
+        vec
     }
 
-    pub fn convert_to_vec(mut list: List) -> Vec<i32> {
-        let mut result: Vec<i32> = vec![];
-        let mut current = list.pop();
-        while let Some(value) = current {
-            result.push(value);
-            current = list.pop()
-        }
-        result.reverse();
-        result
-    }
-
-    // helper functions for testing
     pub fn create_list_from_vec(mut input: Vec<i32>) -> List {
         let mut list: List = List::new(None);
         input.reverse();
@@ -121,12 +113,6 @@ impl Solution {
             list.push(i);
         }
         list
-    }
-
-    pub fn create_vec_from_node(input: Option<Box<ListNode>>) -> Vec<i32> {
-        let list = Solution::create_list_from_node(input);
-        let result = Solution::convert_to_vec(list);
-        result
     }
 }
 

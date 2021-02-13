@@ -10,7 +10,7 @@ Created this repository as practice for coding in Rust using [Leetcode](https://
 * 2021/02/13: [Problem 2](https://leetcode.com/problems/add-two-numbers/) (0002_add_two_numbers)
 
 ## Backlog for Refactoring
-* Problem 2 needs to be optimized.
+* TBD
 
 ## Creating Projects
 Cargo syntax for creating projects that begin with numeric values. This is because crates cannot begin with numeric values by convention.
