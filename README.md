@@ -2,12 +2,13 @@
 Created this repository as practice for coding in Rust using [Leetcode](https://leetcode.com/problemset/all/) problems.
 
 ## WIP Problem
-* 2021/02/13: [Problem 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (0003_longest_substring)
+* TBD
 
 ## Solved Problems
 * 2020/12/19: [Problem 54](https://leetcode.com/problems/spiral-matrix/) (0054_spiral_matrix)
 * 2021/02/02: [Problem 1](https://leetcode.com/problems/two-sum/) (0001_two_sum)
 * 2021/02/13: [Problem 2](https://leetcode.com/problems/add-two-numbers/) (0002_add_two_numbers)
+* 2021/12/21: [Problem 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (0003_longest_substring)
 
 ## Backlog for Refactoring
 * TBD
