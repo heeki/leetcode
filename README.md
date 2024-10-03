@@ -2,7 +2,7 @@
 Created this repository as practice for coding in Rust using [Leetcode](https://leetcode.com/problemset/all/) problems.
 
 ## WIP Problem
-* 2022/01/03: [Problem 13](https://leetcode.com/problems/roman-to-integer/) (0013_roman_to_integer)
+* TBD
 
 ## Solved Problems
 * 2020/12/19: [Problem 54](https://leetcode.com/problems/spiral-matrix/) (0054_spiral_matrix)
@@ -10,7 +10,7 @@ Created this repository as practice for coding in Rust using [Leetcode](https://
 * 2021/02/13: [Problem 2](https://leetcode.com/problems/add-two-numbers/) (0002_add_two_numbers)
 * 2021/12/21: [Problem 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (0003_longest_substring)
 * 2022/01/03: [Problem 9](https://leetcode.com/problems/palindrome-number/) (0009_palindrome_number)
-
+* 2024/10/03: [Problem 13](https://leetcode.com/problems/roman-to-integer/) (0013_roman_to_integer)
 
 ## Backlog for Refactoring
 * TBD
