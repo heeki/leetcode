@@ -2,7 +2,7 @@
 Created this repository as practice for coding in Rust using [Leetcode](https://leetcode.com/problemset/all/) problems.
 
 ## WIP Problem
-* TBD
+* 2024/10/07: [Problem 14](https://leetcode.com/problems/longest-common-prefix/) (0014_longest_common_prefix)
 
 ## Solved Problems
 * 2020/12/19: [Problem 54](https://leetcode.com/problems/spiral-matrix/) (0054_spiral_matrix)
@@ -25,4 +25,5 @@ cargo new 0002_add_two_numbers --name add_two_numbers
 cargo new 0003_longest_substring --name longest_substring
 cargo new 0009_palindrome_number --name palindrome_number
 cargo new 0013_roman_to_integer --name roman_to_integer
+cargo new 0014_longest_common_prefix --name longest_common_prefix
 ```
