@@ -2,7 +2,7 @@
 Created this repository as practice for coding in Rust using [Leetcode](https://leetcode.com/problemset/all/) problems.
 
 ## WIP Problem
-* TBD
+* 2024/10/25: [Problem 21](https://leetcode.com/problems/merge-two-sorted-lists) (0021_merge_two_sorted_lists)
 
 ## Solved Problems
 * 2020/12/19: [Problem 54](https://leetcode.com/problems/spiral-matrix/) (0054_spiral_matrix)
@@ -29,4 +29,5 @@ cargo new 0009_palindrome_number --name palindrome_number
 cargo new 0013_roman_to_integer --name roman_to_integer
 cargo new 0014_longest_common_prefix --name longest_common_prefix
 cargo new 0020_valid_parenthesis --name valid_parenthesis
+cargo new 0021_merge_two_sorted_lists --name merge_two_sorted_lists
 ```
