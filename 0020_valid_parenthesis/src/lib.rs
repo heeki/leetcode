@@ -9,18 +9,15 @@ impl Solution {
             match c {
                 '(' | '{' | '[' => validation.push_front(c),
                 ')' => match validation.front() {
-                    Some(x) if *x == '(' => { validation.pop_front(); () },
-                    Some(_) => validation.push_front(c),
+                    Some(x) => if *x == '(' { validation.pop_front(); () } else { validation.push_front(c) },
                     None => validation.push_front(c)
                 },
                 '}' => match validation.front() {
-                    Some(x) if *x == '{' => { validation.pop_front(); () },
-                    Some(_) => validation.push_front(c),
+                    Some(x) => if *x == '{' { validation.pop_front(); () } else { validation.push_front(c) },
                     None => validation.push_front(c)
                 },
                 ']' => match validation.front() {
-                    Some(x) if *x == '[' => { validation.pop_front(); () },
-                    Some(_) => validation.push_front(c),
+                    Some(x) => if *x == '[' { validation.pop_front(); () } else { validation.push_front(c) },
                     None => validation.push_front(c)
                 },
                 _ => ()
