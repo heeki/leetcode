@@ -14,6 +14,7 @@ Created this repository as practice for coding in Rust using [Leetcode](https://
 * 2024/10/19: [Problem 14](https://leetcode.com/problems/longest-common-prefix/) (0014_longest_common_prefix)
 * 2024/10/25: [Problem 20](https://leetcode.com/problems/valid-parentheses/) (0020_valid_parenthesis)
 * 2024/10/27: [Problem 21](https://leetcode.com/problems/merge-two-sorted-lists) (0021_merge_two_sorted_lists)
+* 2024/10/31: [Problem 26](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (0026_remove_duplicates)
 
 ## Backlog for Refactoring
 * TBD
@@ -31,4 +32,5 @@ cargo new 0013_roman_to_integer --name roman_to_integer
 cargo new 0014_longest_common_prefix --name longest_common_prefix
 cargo new 0020_valid_parenthesis --name valid_parenthesis
 cargo new 0021_merge_two_sorted_lists --name merge_two_sorted_lists
+cargo new 0026_remove_duplicates --name remove_duplicates
 ```
